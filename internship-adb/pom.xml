@@ -14,6 +14,7 @@
         <module>EX3-SCHEDULING</module>
         <module>EX4-STREAM-API-JUNIT-TESTS</module>
         <module>EX5-EXPERIMENTAL-GET-MAPPING</module>
+        <module>EX6-H2-STUDENTS</module>
     </modules>
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
