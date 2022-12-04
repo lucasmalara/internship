@@ -10,6 +10,7 @@
     <version>1.0</version>
     <modules>
         <module>EX1-BEANS</module>
+        <module>EX2-BEANS</module>
     </modules>
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
