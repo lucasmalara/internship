@@ -9,4 +9,4 @@ target/
 .mvn
 mvnw
 mvnw.cmd
-*.md
+HELP.md
