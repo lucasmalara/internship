@@ -13,13 +13,7 @@ import java.util.List;
 public class AnimalUtils {
 
     public static boolean isValidName(String name) {
-        if (name == null) {
-            return false;
-        }
-        if (name.length() < 3) {
-            return false;
-        }
-        return name.matches("\\p{L}*");
+        return name.matches("^(?!.\\r\\n)\\p{L}{3,}$");
     }
 
     public static List<Dog> getDogs(List<Animal> animals) {
