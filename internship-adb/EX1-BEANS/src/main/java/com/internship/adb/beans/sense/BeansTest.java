@@ -20,9 +20,10 @@ public class BeansTest {
 
     public static void main(final String[] args) {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
-
         final Imagination imaginationBean = context.getBean(Imagination.class);
         final Reality realityBean = context.getBean(Reality.class);
+        context.close();
+
         final Properties property = new Properties();
 
         System.out.println(Imagination.class.getSimpleName() + ": " + imaginationBean.getMessage());
