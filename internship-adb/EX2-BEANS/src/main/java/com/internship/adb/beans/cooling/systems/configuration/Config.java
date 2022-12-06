@@ -23,8 +23,17 @@ public class Config {
         return 0 == new Random().nextInt(2);
     }
 
-    @Bean
+    @Bean("airConditioning")
     public CoolingSystem getAirConditioningBean() {
+        /*
+        * Since it is a Configuration class getRandomBooleanBean() will not be called like a pure JAVA code.
+        * It will be returned as a Bean once retrieved from the Spring context.
+        * */
         return new AirConditioning(getRandomBooleanBean());
+    }
+
+    @Bean("airConditioningAlt")
+    public CoolingSystem getAirConditioningBeanAlt(/*@Autowired*/ boolean isMobile) {
+        return new AirConditioning(isMobile);
     }
 }
