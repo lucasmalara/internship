@@ -10,7 +10,7 @@ public class Person {
     @Getter
     private final String name;
     public static final String DEFAULT_NAME = "stranger";
-    private static final AtomicLong numeration = new AtomicLong();
+    private static final AtomicLong NUMERATION = new AtomicLong();
 
     public Person(String name) {
         this.name = adjustName(name);
@@ -18,7 +18,7 @@ public class Person {
     }
 
     private Long generateId() {
-        return isDefaultName(this.name) ? 0L : numeration.incrementAndGet();
+        return isDefaultName(this.name) ? 0L : NUMERATION.incrementAndGet();
     }
 
     public static boolean isDefaultName(String name) {
@@ -26,25 +26,21 @@ public class Person {
     }
 
     private static String adjustName(String name) {
-        if (isDefaultName(name)) {
-            return name;
-        } else {
-            if (name.matches("^(?!.*[\r\n])[\\da-zA-Z ]+$")) {
-                String[] split = name.split(" ");
-                StringBuilder adjustedName = new StringBuilder();
-                for (int i = 0; i < split.length; i++) {
-                    String partOfName = split[i];
-                    if(!partOfName.isBlank()) {
-                        adjustedName.append(partOfName);
-                        if(i != split.length - 1) {
-                            adjustedName.append(" ");
-                        }
+        if (name.matches("^(?!.*[\r\n])[\\da-zA-Z ]+$")) {
+            String[] split = name.split(" ");
+            StringBuilder adjustedName = new StringBuilder();
+            for (int i = 0; i < split.length; i++) {
+                String partOfName = split[i];
+                if (!partOfName.isBlank()) {
+                    adjustedName.append(partOfName);
+                    if (i != split.length - 1) {
+                        adjustedName.append(" ");
                     }
                 }
-                return adjustedName.toString();
-            } else {
-                return DEFAULT_NAME;
             }
+            return adjustedName.toString();
+        } else {
+            return DEFAULT_NAME;
         }
     }
 }
