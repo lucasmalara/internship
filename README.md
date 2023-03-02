@@ -1029,4 +1029,4 @@ since there is no occurrence of required `json property`. In this case no occurr
 
 ## Author
 
-[@Łukasz Malara](https://github.com/LucasMalara "author")
+[@Łukasz Malara](https://github.com/lucasmalara "author")
