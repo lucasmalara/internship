@@ -2,19 +2,18 @@
 # INTERNSHIP ADB
 
 <p align="justify">
-The present repository you browse contains projects that are outcome of my work placement 
+The present repository contains projects that are outcome of my work placement 
 (as a part of my first-cycle studies) in <b>ADB POLSKA SP. Z O.O. (ZIELONA GORA OFFICE)</b> 
 that took place in <b>July 2021</b>. In the process of work placement I have been introduced to foundations of 
-<code>Spring framework</code>. The culmination of work was to implement <b>Representational state transfer application 
-programming interface</b> known in an abbreviation as a <code>REST API</code>.</p>
+<code>Spring framework</code>. The culmination of work was to implement an example of <b>Representational state transfer 
+application programming interface</b> known as a <code>REST API</code>.</p>
 <br>
 <p align="justify">
 <b>IMPORTANT:</b>
 <br>
 Note that this is not original repository I was working on during work placement. Projects included here has been 
 improved in terms of code quality after reviewing the code after a while, but general idea and goal of the projects 
-remained the same. Dependencies were updated since the creation of project, but only up to a certain point of working 
-on projects.
+remained the same. Dependencies were updated since the creation of each project, but only up to a certain point.
 </p>
 
 <h2 id="list">LIST OF PROJECTS</h2>
@@ -30,10 +29,10 @@ on projects.
 <h2 id="ex1">EX1-BEANS</h2>
 
 <p align="justify">
-This project was focused on usage idea of <b>inversion of control (IoC)</b>. There has been defined simple 
+This project was focused on usage idea of <b>inversion of control (IoC)</b>. There have been defined simple 
 <code>Spring Beans</code> of a <code>Spring Component class</code>. They were managed by a <code>Spring Container</code> 
 implemented as a <b>AnnotationConfigApplicationContext class</b>. The application is also reading and printing out 
-information from created <code>properties file</code> during the application compilation. The file looks as follows:
+specific information from a created <code>properties file</code> during the application compilation. The file looks as follows:
 </p>
 
 ```properties
@@ -53,7 +52,7 @@ where `date` is computed locally by current date - `LocalDate().now` and `java-v
 
 ### Used Dependencies:
 
-[spring-context](https://mvnrepository.com/artifact/org.springframework/spring-context/5.3.23) 
+[spring-context](https://mvnrepository.com/artifact/org.springframework/spring-context/5.3.23)
 (5.3.23)
 
 <p align="right">
@@ -64,9 +63,9 @@ where `date` is computed locally by current date - `LocalDate().now` and `java-v
 
 <p align="justify">
 This project was focused on another usage example of <b>inversion of control (IoC)</b> with additional 
-<b>dependency injection</b> in action. There has been shown how to define a <code>Spring Bean</code> of 
-<code>Spring Configuration class</code> by applying a priority with <code>@Primary annotation</code> and by specifying 
-beans name attribute. The injection takes place in a method parameter of other bean. The application also presented 
+<b>dependency injection</b> in action. It has been shown how to define a <code>Spring Bean</code> of 
+<code>Spring Configuration class</code> by applying a priority with <code>@Primary</code> <b>annotation</b> and by specifying 
+beans' name attribute. The injection takes place in a method parameter of the other bean. The application also proposed 
 an idea of two <b>cooling systems implementations</b>: <code>Fridge class</code> and <code>Air Conditioning class</code>.
 </p>
 
@@ -91,8 +90,8 @@ an idea of two <b>cooling systems implementations</b>: <code>Fridge class</code>
 <h2 id="ex3">EX3-SCHEDULING</h2>
 
 <p align="justify">
-This project has shown how to <b>schedule</b> a task with <code>Spring</code> using <code>@Scheduled annotation</code>. 
-The task was focused on sending <code>GET</code> requests to an <code>API</code> and process its response.
+This project has shown how to <b>schedule</b> a task with <code>Spring</code> using <code>@Scheduled</code> <b>annotation</b>. 
+The task was focused on sending <code>GET</code> requests to chosen <code>API</code> and process its response.
 </p>
 
 - _(Expected)_ RAW response:
@@ -100,7 +99,7 @@ The task was focused on sending <code>GET</code> requests to an <code>API</code>
 ```json
 [
   {
-      "fact": "RANDOM_FACT_HERE"
+    "fact": "RANDOM_FACT_HERE"
   }
 ]
 ```
@@ -117,7 +116,7 @@ _New random fact is printed on console every **8s**._
 
 - Code language: `Java 11`
 - Built with: `Spring Boot`, `Maven`
-- Interacts with [API](https://dukengn.github.io/Dog-facts-API/)
+- Chosen [API](https://dukengn.github.io/Dog-facts-API/)
 
 ### Used Dependencies:
 
@@ -134,7 +133,7 @@ _New random fact is printed on console every **8s**._
 <h2 id="ex4">EX4-STREAM-API-JUNIT-TESTS</h2>
 
 <p align="justify">
-This project was focused on both usage of <code>stream API</code> and <code>unit tests</code> using <code>JUnit Jupiter</code>. 
+This project was focused on both usage of <code>stream API</code> and <code>unit testing</code> with <code>JUnit Jupiter</code>. 
 The purpose of the project has been satisfied based on an <b>abstract</b> implementation of <b>dogs</b> and <b>cats</b>.
 </p>
 
@@ -147,28 +146,28 @@ The purpose of the project has been satisfied based on an <b>abstract</b> implem
 ### Class Hierarchy Tree:
 
 - Object (java.lang)
-  - Enum (java.lang)
-    - Hairiness
-    - CatHunterSense
-    - DogCommand
-  - Animal
-    - Cat
-    - Dog
-  - AnimalUtils
-  - AbstractCollection (java.util)
-    - AbstractList (java.util)
-      - ArrayList (java.util)
-        - CustomizedArrayList
+    - Enum (java.lang)
+        - Hairiness
+        - CatHunterSense
+        - DogCommand
+    - Animal
+        - Cat
+        - Dog
+    - AnimalUtils
+    - AbstractCollection (java.util)
+        - AbstractList (java.util)
+            - ArrayList (java.util)
+                - CustomizedArrayList
 
 ### Used Dependencies:
 
 [Lombok](https://projectlombok.org/)
 (1.18.24)
 
-[JUnit Jupiter API](https://junit.org/junit5/docs/5.9.0/api/org.junit.jupiter.api/module-summary.html) 
+[JUnit Jupiter API](https://junit.org/junit5/docs/5.9.0/api/org.junit.jupiter.api/module-summary.html)
 (5.9.0)
 
-[JUnit Jupiter Params](https://junit.org/junit5/docs/5.9.0/api/org.junit.jupiter.params/module-summary.html) 
+[JUnit Jupiter Params](https://junit.org/junit5/docs/5.9.0/api/org.junit.jupiter.params/module-summary.html)
 (5.9.0)
 
 <p align="right">
@@ -178,21 +177,21 @@ The purpose of the project has been satisfied based on an <b>abstract</b> implem
 <h2 id="ex5">EX5-EXPERIMENTAL-GET-MAPPING</h2>
 
 <p align="justify">
-This project started as an experiment. It was focused on creating first basic <code>WEB API</code>. 
-Mapping was only provided for <code>GET method</code>. The concept of the project can be described that:
+This project started as an experiment. It was focused on creating first basic <code>API</code>. 
+Mapping was only provided for <code>GET method</code>. The concept of the project can be described as:
 </p>
 
-- User sends a request with a parameter key `name` and defined its value.
-- The `API` sends response message personalized by provided value of the key `name`.
-- If the value of the key `name` is `undefined`, equals to `stranger` or it **DOES NOT MATCH** specified `regex`
-<a href="#ex5regex">&#10549;</a>, the `API` sends default response<a href="#ex5default">&#10549;</a> 
-(or error response in some cases).
-- Personalized messages `ids` are **incremented** by **1**, default message `id` is always **0**.
+- User sends a request with a parameter key `name` and defined value.
+- The `API` sends response determined by provided value of the key.
+- If the value of the key is `undefined`, equals to `stranger` or it **DOES NOT MATCH** specified `regex`
+  <a href="#ex5regex">&#10549;</a>, the `API` returns basic response<a href="#ex5default">&#10549;</a>
+  (or error response in some cases).
+- Personalized responses' `ids` are **incremented** by **1** and all basic responses' `ids` are always **0**.
 - Incrementation is stopped being followed once application has been shut down.
-- Values of the key `name` are being **formatted** before the `API` sends a response. Read further for details.
-<a href="#formatting">&#10549;</a>
+- Values of the key are being **formatted** before the `API` returns a response. Read further for details.
+  <a href="#formatting">&#10549;</a>
 
-> The general idea is that user can introduce themselves in a request and then `API` sends welcome message as a response to that.
+> The general idea is that user can introduce themselves in a request and then `API` returns welcome message as a response.
 
 The application **produces** data in `json` format.
 
@@ -200,7 +199,7 @@ The application **produces** data in `json` format.
 
 - Code language: `Java 11`
 - Built with: `Spring Boot`, `Maven`
-- Runs Tomcat on `localhost` on default port
+- Runs Tomcat on `localhost` on default port.
 
 ### API Reference:
 
@@ -218,7 +217,7 @@ The application **produces** data in `json` format.
 
 ### REGEX Info:
 
-<p id="ex5regex" align="justify"><code>REGEX </code> to match for <code>name</code>:</p>
+<p id="ex5regex" align="justify"><code>REGEX </code> to match for the key <code>name</code>:</p>
 
 ```regexp
 ^(?!.*[\r\n])[\da-zA-Z ]+$
@@ -228,19 +227,19 @@ To match this `regex` it is necessary that:
 
 - Provided `String` **IS NOT BLANK**.
 - Provided `String` contains only **latin** letter(s) in **lower** or **UPPER** case or/and
-number(s) between **0** and **9** or/and space character(s).
+  number(s) between **0** and **9** or/and space character(s).
 - Provided `String` is single lined.
 
 <h3 id="formatting">About Further Formatting <code>name</code>:</h3>
 
 - Let's say we provide value: `%20L%20u%20%20c%20%20%20as%20%20`
-where `%20` is encoding for space character.
+  where `%20` is encoding for a space character.
 - Value is being validated. In this case, validation is successful.
 - Now it's time for formatting. To simplify how it works, it can be said that:
-  - We **split** validated **String** to multiple strings by singular space character.
-  - We take each `String` that **DOES NOT** contain space character and append it to output.
-  - After each, **EXCEPT LAST** appended `String`, we append singular space character additionally.
-  - Formatted output looks like this: <code>L&nbsp;u&nbsp;c&nbsp;as</code>.
+    - We **split** validated **String** to multiple strings by a singular space character.
+    - We take each `String` that **DOES NOT** contain space character and append it to output.
+    - After each, **EXCEPT LAST** appended `String`, we append singular space character additionally.
+    - Formatted output looks like this: <code>L&nbsp;u&nbsp;c&nbsp;as</code>.
 
 > In shortcut, it can be said that every formatted value starts and ends with a latin letter or with a number
 and between any pair (if exists) of the space characters, there is at least one latin letter or a number.
@@ -285,7 +284,7 @@ Examples:
 }
 ```
 
-> Note that it is still possible to force `API` sending an error response.
+> Note that it is still possible to force `API` returning an error response.
 
 ### Used Dependencies:
 
@@ -306,11 +305,11 @@ Examples:
 
 <p align="justify">
 This project was focused on defining <code>Entity class</code> and <code>Spring Data JPA repositories</code> implementation.
-It is built additionally on <code>Spring Component class</code>, <code>Spring Configuration class</code> and 
+It was built additionally on <code>Spring Component class</code>, <code>Spring Configuration class</code> and 
 <code>Spring Service class</code>. <b>Configuration class</b> implements <code>CommandLineRunner interface</code> and 
 its method for providing execution of <b>business logic</b> defined in the <b>service class</b>, while the <b>component class</b> 
-is responsible for <b>value injection</b> from <code>properties file</code> using <code>@Value annotation</code>. 
-The value is used to define a number of students to create and add to <b>repository</b>. Each student is created randomly 
+is responsible for <b>value injection</b> from <code>properties file</code> using <code>@Value</code> <b>annotation</b>. 
+The value is used to define a number of students to create and add to the <b>repository</b>. Each student is created randomly 
 using some data from <code>Datafaker library</code>. For the presentation needs of <code>findBySurname(String)</code> method, 
 it has been guaranteed that for <b>n-students</b>, there are exactly <b>&lfloor;0,3*n&rfloor; students</b> named <i>Lopez</i>. 
 Each student <code>id</code> is <b>autogenerated</b> during entity creation. Created entities can be managed from 
@@ -396,7 +395,7 @@ The project is built from following components:
 - `Entity class`
 - `Utility classes`
 
-**Utility classes** delivers follows functionalities:
+**Utility classes** delivers following functionalities:
 
 - Bus conversions. Mapping `entities` to `model` representation (and vice versa).
 - Data pseudo-generator for busses.
@@ -405,14 +404,14 @@ The project is built from following components:
 
 **Handled exceptions** using `@ExceptionsHandler annotation`:
 
-- BusNotFound</b> - thrown if it could not find a bus with given <code>id</code>.
-- BusAlreadyExists</b> - thrown if it could not add a bus with given <code>id</code> (id already taken)
-- InvalidDataProvided</b> - thrown if required data of request was invalid. Basically, whenever any of following 
-exceptions has been thrown:
-  - HttpMessageNotReadableException
-  - IllegalArgumentException
-  - NullPointerException
-  - PropertyValueException
+- BusNotFound</b> - thrown, if it could not find a bus with given <code>id</code>.
+- BusAlreadyExists</b> - thrown, if it could not add a bus with given <code>id</code> (id already taken)
+- InvalidDataProvided</b> - thrown, if required data of the request was invalid. Basically, whenever any of following
+  exceptions has been thrown:
+    - HttpMessageNotReadableException
+    - IllegalArgumentException
+    - NullPointerException
+    - PropertyValueException
 
 <p align="justify">
 <b>Configuration class</b> has been created for an easier-to-start testing <code>REST API</code> with <code>HTTP methods</code>.
@@ -449,7 +448,7 @@ The application **consumes** and **produces** data in `json` format.
   GET /busses/{id}
 ```
 
-where `id` is a `String` value of a non-negative integer.
+where `id` is a value of a non-negative integer.
 
 <br>
 
@@ -485,7 +484,7 @@ where `id` is a `String` value of a non-negative integer.
   PUT /busses/{id}
 ```
 
-where `id` is a `String` value of a non-negative integer.
+where `id` is a value of a non-negative integer.
 
 - Valid `request body` pattern:
 
@@ -513,7 +512,7 @@ where `id` is a `String` value of a non-negative integer.
   DELETE /busses/{id}
 ```
 
-where `id` is a `String` value of a non-negative integer.
+where `id` is a value of a non-negative integer.
 
 <br>
 
@@ -526,7 +525,7 @@ and <code>length</code>:</p>
 ^\d+$
 ```
 
-Just number or sequence of numbers between **0** and **9**.
+Just a number or sequence of numbers between **0** and **9**.
 
 <br>
 
@@ -542,9 +541,9 @@ To match this `regex` it is necessary that:
 - Provided `String` starts and ends with any **latin** letter in **lower**< or **UPPER** case.
 - Provided `String` is single lined.
 - Every except **FIRST** and **LAST** index of provided `String` can be:
-  - A **latin** letter in **lower** or **UPPER** case.
-  - A space character.
-  - A dash: <code>&#8212;</code>.
+    - A **latin** letter in **lower** or **UPPER** case.
+    - A space character.
+    - A dash: <code>&#8212;</code>.
 
 <br>
 
@@ -557,14 +556,14 @@ To match this `regex` it is necessary that:
 To match this `regex` it is necessary that:
 
 - Provided `String` **IS NOT BLANK**.
-- Provided `String` starts and ends with any **latin** letter in **lower** or **UPPER** case or with any number between 
-**0** and **9**.
+- Provided `String` starts and ends with a **latin** letter in **lower** or **UPPER** case or with any number between
+  **0** and **9**.
 - Provided `String` is single lined.
 - Every except **FIRST** and **LAST** index of provided `String` can be:
-  - A **latin** letter in **lower** or **UPPER** case.
-  - Any number between **0** and **9**.
-  - A space character.
-  - A dash: <code>&#8212;</code>.
+    - A **latin** letter in **lower** or **UPPER** case.
+    - Any number between **0** and **9**.
+    - A space character.
+    - A dash: <code>&#8212;</code>.
 
 <br>
 
@@ -698,13 +697,13 @@ Request body:
 
 ```json
 {
-    "id": 20,
-    "brand": "myBrand",
-    "model": "myModel",
-    "seats": 50,
-    "standingRoom": 14,
-    "length": 8,
-    "engine": "eLeCtRiC"
+  "id": 20,
+  "brand": "myBrand",
+  "model": "myModel",
+  "seats": 50,
+  "standingRoom": 14,
+  "length": 8,
+  "engine": "eLeCtRiC"
 }
 ```
 
@@ -713,13 +712,13 @@ Request body:
 
 ```json
 {
-    "id": "20",
-    "brand": "myBrand",
-    "model": "myModel",
-    "seats": 50,
-    "standingRoom": 14,
-    "length": 8,
-    "engine": "ELECTRIC"
+  "id": "20",
+  "brand": "myBrand",
+  "model": "myModel",
+  "seats": 50,
+  "standingRoom": 14,
+  "length": 8,
+  "engine": "ELECTRIC"
 }
 ```
 
@@ -733,32 +732,32 @@ Request body:
 
 ```json
 {
-    "id": "21",
-    "brand": "updatedBrand",
-    "model": "updatedModel",
-    "seats": 49,
-    "standingRoom": 0,
-    "length": 9,
-    "engine": "diesel"
+  "id": "21",
+  "brand": "updatedBrand",
+  "model": "updatedModel",
+  "seats": 49,
+  "standingRoom": 0,
+  "length": 9,
+  "engine": "diesel"
 }
 ```
 
 - Http status: **_200 OK_**
-- Response: 
+- Response:
 
 ```json
 {
-    "id": "20",
-    "brand": "updatedBrand",
-    "model": "updatedModel",
-    "seats": 49,
-    "standingRoom": 0,
-    "length": 9,
-    "engine": "DIESEL"
+  "id": "20",
+  "brand": "updatedBrand",
+  "model": "updatedModel",
+  "seats": 49,
+  "standingRoom": 0,
+  "length": 9,
+  "engine": "DIESEL"
 }
 ```
 
-As we can see once value is assigned to `id`, the property became <b>immutable</b>.
+As we can see, once value is assigned to `id`, the property became <b>immutable</b>.
 
 <br>
 
@@ -789,8 +788,8 @@ where engine=`myEngine`
 
 ```json
 {
-    "code": 3,
-    "message": "Something went wrong. Validate provided data."
+  "code": 3,
+  "message": "Something went wrong. Validate provided data."
 }
 ```
 
@@ -802,28 +801,28 @@ where engine=`myEngine`
 
 Path variable: `myId`
 
-- `myId` **DOES NOT MATCH** declared `regex`<a href="#ex7num-regex">&#10548;</a>, hence repository does not contain a bus 
-with such id.
+- `myId` **DOES NOT MATCH** declared `regex`<a href="#ex7num-regex">&#10548;</a>, hence repository does not contain a bus
+  with such id.
 - Http status: **_404 Not Found_**
 - Response:
 
 ```json
 {
-    "code": 1,
-    "message": "Bus with id: [myId] not found."
+  "code": 1,
+  "message": "Bus with id: [myId] not found."
 }
 ```
 
 Path variable: `0`
 
-- At current moment repository **DOES NOT CONTAIN** bus with id: `0`
+- At current moment repository **DOES NOT CONTAIN** a bus with id: `0`
 - Http status: **_404 Not Found_**
 - Response:
 
 ```json
 {
-    "code": 1,
-    "message": "Bus with id: [0] not found."
+  "code": 1,
+  "message": "Bus with id: [0] not found."
 }
 ```
 
@@ -850,12 +849,12 @@ Request body:
 
 ```json
 {
-    "code": 2,
-    "message": "Bus with id: [20] already exists."
+  "code": 2,
+  "message": "Bus with id: [20] already exists."
 }
 ```
 
-since we added recently a bus with `id: 20`.
+since we recently added a bus with `id: 20`.
 
 <br>
 
@@ -908,8 +907,8 @@ Request body:
 
 ```json
 {
-    "code": 3,
-    "message": "Something went wrong. Validate provided data."
+  "code": 3,
+  "message": "Something went wrong. Validate provided data."
 }
 ```
 
@@ -996,7 +995,7 @@ Request body:
 }
 ```
 
-since there is no occurrence of required `json property`. In this case no occurrence of `id`.
+since there is no occurrence of required `json property`. In this case it is no occurrence of `id`.
 
 ### Screenshots:
 
