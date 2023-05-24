@@ -88,7 +88,7 @@ and <i>Air Conditioning class</i>.
 
 <p align="justify">
 This project has shown how to <b>schedule</b> a task with <b>Spring</b> using <code>@Scheduled</code> <b>annotation</b>. 
-The task was focused on sending <code>GET</code> requests to chosen <i>API</i> and process its response.
+The task was focused on sending <code>GET</code> requests to chosen <i>Web API</i> and process its response.
 </p>
 
 - _(Expected)_ RAW response:
@@ -174,12 +174,12 @@ The purpose of the project has been satisfied based on an <b>abstract</b> implem
 <h2 id="ex5">EX5-EXPERIMENTAL-GET-MAPPING</h2>
 
 <p align="justify">
-This project started as an experiment. It was focused on creating first basic <i>API</i>. 
+This project started as an experiment. It was focused on creating first basic <i>Web API</i>. 
 Mapping was only provided for <code>GET</code> method. The concept of the project can be described as:
 </p>
 
-- User sends a request with a parameter key `name` and defined value.
-- The _API_ sends response determined by provided value of the key.
+- User sends a request with a parameter key `name` and (optionally) defined value.
+- _API_ sends a response determined by the provided value of the key.
 - If the value of the key is `undefined`, equals to `stranger` or it **DOES NOT MATCH** specified `regex`
   <a href="#ex5regex">&#10549;</a>, _API_ returns general response<a href="#ex5default">&#10549;</a>
   (or error response in some cases).
@@ -377,7 +377,7 @@ spring.datasource.password=
 <h2 id="ex7">EX7-RESTAPI-H2-BUSSES</h2>
 
 <p align="justify">
-This project was focused on <i>API</i> implementation following <b>REST</b> architectural approach.
+This project was focused on <i>Web API</i> implementation following <b>REST</b> architectural approach.
 The project is built from following components:
 </p>
 
