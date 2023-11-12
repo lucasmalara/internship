@@ -2,35 +2,69 @@
 # INTERNSHIP ADB
 
 <p align="justify">
-The present repository contains projects that are outcome of my work placement 
+This repository contains projects that are outcome of my work placement 
 (as a part of my first-cycle studies) in <b>ADB POLSKA SP. Z O.O. (ZIELONA GORA OFFICE)</b> 
 that took place in <b>July 2021</b>. In the process of work placement I have been introduced to foundations of 
-<b>Spring framework</b>. The culmination of work was to implement an example of <b>Representational state transfer 
-application programming interface</b> known as a <b>REST API</b>.</p>
+<code>Spring framework</code>. The culmination of work was to implement an example of simple <code>REST API</code>.</p>
 
 <p align="justify">
 Note that this is not original repository I was working on during work placement. Projects included here has been 
-improved in terms of code quality after reviewing the code. However, the general idea of the projects remained the same. 
+improved in terms of code quality after self-reviewing the code. However, the general idea of the projects remained the same. 
 Dependencies were updated since the creation of each project, but only up to a certain point.
 </p>
 
-<h2 id="list">LIST OF PROJECTS</h2>
+## LIST OF PROJECTS
 
-- [EX1-BEANS](#ex1)
-- [EX2-BEANS](#ex2)
-- [EX3-SCHEDULING](#ex3)
-- [EX4-STREAM-API-JUNIT-TESTS](#ex4)
-- [EX5-EXPERIMENTAL-GET-MAPPING](#ex5)
-- [EX6-H2-STUDENTS](#ex6)
-- [EX7-RESTAPI-H2-BUSSES](#ex7)
+- EX1-BEANS
+- EX2-BEANS
+- EX3-SCHEDULING
+- EX4-STREAM-API-JUNIT-TESTS
+- EX5-EXPERIMENTAL-GET-MAPPING
+- EX6-H2-STUDENTS
+- EX7-RESTAPI-H2-BUSSES
 
-<h2 id="ex1">EX1-BEANS</h2>
+## Table Of Content
+
+- EX1-BEANS
+  - Project Details
+  - Dependencies
+- EX2-BEANS
+  - Project Details
+  - Dependencies
+- EX3-SCHEDULING
+    - Project Details
+    - Dependencies
+- EX4-STREAM-API-JUNIT-TESTS
+    - Project Details
+  - Class Hierarchy Tree
+  - Dependencies
+- EX5-EXPERIMENTAL-GET-MAPPING
+  - Project Details
+  - API Reference
+  - RegEx Details
+  - About Further Formatting `name`
+  - API Response Examples
+  - Dependencies
+- EX6-H2-STUDENTS
+  - Project Details
+  - Screenshots
+  - Dependencies
+- EX7-RESTAPI-H2-BUSSES
+  - Project Details
+  - API Reference
+  - RegEx Details
+  - API Response Examples
+  - Screenshots
+  - Dependencies
+
+
+## EX1-BEANS
 
 <p align="justify">
-This project was focused on usage idea of <b>inversion of control (IoC)</b>. There have been defined simple 
-<i>Spring Beans</i> of a <i>Spring Component class</i> that were managed by a <i>Spring Container</i> 
-implemented as a <b>AnnotationConfigApplicationContext class</b>. The application is also reading and printing out 
-specific information from a created <b>properties file</b> during the application compilation. The file looks as follows:
+This project was focused on presentation of application of <code>inversion of control (IoC)</code> using simple 
+<b>Spring Beans</b> that were managed by a <b>Spring Container</b> implemented as a 
+<b>AnnotationConfigApplicationContext class</b>. The application is also writing in and reading out specific information 
+to/from a created <b>properties file</b> at app running. The file looks as follows:
 </p>
 
 ```properties
@@ -40,12 +74,18 @@ java-version=11.0.11
 program-version=1.0
 ```
 
-where `date` is computed locally by current date - `LocalDate().now` and `java-version` is **sdk** version.
+where `date` is computed locally by current date - `LocalDate().now` and `java-version` is an **sdk** version.
+
+### Table Of Content
+
+- Project Details
+- Dependencies
 
 ### Project Details
 
-- Code language: `Java 11`
-- Built with: `Maven`
+- `Java 11`
+- `Spring 5`
+- `Maven`
 - Properties file: [custom.properties](./internship-adb/EX1-BEANS/src/main/resources/custom.properties)
 
 ### Dependencies
@@ -53,24 +93,25 @@ where `date` is computed locally by current date - `LocalDate().now` and `java-v
 [spring-context](https://mvnrepository.com/artifact/org.springframework/spring-context/5.3.23)
 (5.3.23)
 
-<p align="right">
-<a href="#list">BACK TO PROJECTS LIST</a>
-</p>
-
-<h2 id="ex2">EX2-BEANS</h2>
+## EX2-BEANS
 
 <p align="justify">
-This project was focused on using <b>dependency injection</b> in action. It has been shown how to define a 
-<i>Spring Bean</i> of a <i>Spring Configuration class</i> with a priority using <code>@Primary</code> 
-<b>annotation</b> and also by specifying beans' name attribute. The injection takes place in a method parameter of the 
-other bean. The application also proposed an idea of two <b>cooling systems implementations</b>: <i>Fridge class</i> 
-and <i>Air Conditioning class</i>.
+This project was focused on using <code>dependency injection</code> in action by defining a <b>Spring Bean</b> 
+with a priority using <code>@Primary</code> annotation and also by specifying beans' name attribute. 
+The injection takes place in a method parameter of the other bean. The project also presented an idea of two 
+<b>cooling systems implementations</b>: <code>Fridge class</code> and <code>Air Conditioning class</code>.
 </p>
+
+### Table Of Content
+
+- Project Details
+- Dependencies
 
 ### Project Details
 
-- Code language: `Java 11`
-- Built with: `Spring Boot` and `Maven`
+- `Java 11`
+- `Spring Boot 2`
+- `Maven`
 
 ### Dependencies
 
@@ -80,40 +121,36 @@ and <i>Air Conditioning class</i>.
 [spring-boot-autoconfigure](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-autoconfigure/2.7.5)
 (2.7.5)
 
-<p align="right">
-<a href="#list">BACK TO PROJECTS LIST</a>
-</p>
-
-<h2 id="ex3">EX3-SCHEDULING</h2>
+## EX3-SCHEDULING
 
 <p align="justify">
 This project has shown how to <b>schedule</b> a task with <b>Spring</b> using <code>@Scheduled</code> <b>annotation</b>. 
-The task was focused on sending <code>GET</code> requests to chosen <i>Web API</i> and process its response.
+The task was focused on sending <code>GET</code> requests to chosen <code>Web API</code> and process its response. <br>
 </p>
 
-- _(Expected)_ RAW response:
+<h3 align="center">UPDATE 12.11.2023: API seems to be no longer maintained.</h3>
 
-```json
-[
-  {
-    "fact": "RANDOM_FACT_HERE"
-  }
-]
-```
+<br>
 
-- _(Expected)_ Processed response:
+- (Expected) Processed response:
 
 ```text
-RANDOM_FACT_HERE
+    RANDOM_FACT_HERE
 ```
 
-_Random facts are printed on console every **8s**._
+> Random facts are printed on console every **8s**.
+
+### Table Of Content
+
+- Project Details
+- Dependencies
 
 ### Project Details
 
-- Code language: `Java 11`
-- Built with: `Spring Boot` and `Maven`
-- [API](https://dukengn.github.io/Dog-facts-API/)
+- `Java 11`
+- `Spring Boot 2` 
+- `Maven`
+- [API Docs](https://dukengn.github.io/Dog-facts-API/)
 
 ### Dependencies
 
@@ -123,21 +160,24 @@ _Random facts are printed on console every **8s**._
 [spring-boot-autoconfigure](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-autoconfigure/2.7.5)
 (2.7.5)
 
-<p align="right">
-<a href="#list">BACK TO PROJECTS LIST</a>
-</p>
-
-<h2 id="ex4">EX4-STREAM-API-JUNIT-TESTS</h2>
+## EX4-STREAM-API-JUNIT-TESTS
 
 <p align="justify">
-This project was focused on both usage of <b>stream API</b> and <b>unit testing</b> with <i>JUnit Jupiter</i>. 
-The purpose of the project has been satisfied based on an <b>abstract</b> implementation of <i>dogs</i> and <i>cats</i>.
+This project was focused on both usage of <code>stream API</code> and <b>unit testing</b> with 
+<code>JUnit Jupiter</code> framework. The purpose of the project has been satisfied based on an <b>abstract</b> 
+implementation of <b>dogs</b> and <b>cats</b>.
 </p>
+
+### Table Of Content
+
+- Project Details
+- Class Hierarchy Tree
+- Dependencies
 
 ### Project Details
 
-- Code language: `Java 11`
-- Built with: `Maven`
+- `Java 11`
+- `Maven`
 - [Unit tests](./internship-adb/EX4-STREAM-API-JUNIT-TESTS/src/test/java/StreamTest.java)
 
 ### Class Hierarchy Tree
@@ -167,36 +207,41 @@ The purpose of the project has been satisfied based on an <b>abstract</b> implem
 [JUnit Jupiter Params](https://junit.org/junit5/docs/5.9.0/api/org.junit.jupiter.params/module-summary.html)
 (5.9.0)
 
-<p align="right">
-<a href="#list">BACK TO PROJECTS LIST</a>
-</p>
-
-<h2 id="ex5">EX5-EXPERIMENTAL-GET-MAPPING</h2>
+## EX5-EXPERIMENTAL-GET-MAPPING
 
 <p align="justify">
-This project started as an experiment. It was focused on creating first basic <i>Web API</i>. 
+This project started as an experiment. It was focused on creating first basic <code>Web API</code>. 
 Mapping was only provided for <code>GET</code> method. The concept of the project can be described as:
 </p>
 
 - User sends a request with a parameter key `name` and (optionally) defined value.
 - _API_ sends a response determined by the provided value of the key.
-- If the value of the key is `undefined`, equals to `stranger` or it **DOES NOT MATCH** specified `regex`
-  <a href="#ex5regex">&#10549;</a>, _API_ returns general response<a href="#ex5default">&#10549;</a>
-  (or error response in some cases).
+- If the value of the key is `undefined`, equals to `stranger` or it **DOES NOT MATCH** specified `regex`, 
+`API` returns general response (or error response in some cases).
 - Personalized responses' `ids` are **incremented** by **1** and all general responses' `ids` are always **0**.
 - Incrementation is stopped being followed once application has been shut down.
-- Values of the key are being **formatted** before the _API_ returns a response. Read further for details.
-  <a href="#formatting">&#10549;</a>
+- Values of the key are being **formatted** before the `API` returns a response. Read further for details.
 
-> The general idea is that user can introduce themselves in a request and then _API_ returns welcome message as a response.
+> The general idea is that user can introduce themselves in a request and then API returns welcome message as a response.
 
 The application **produces** data in `json` format.
 
+### Table Of Content
+
+- Project Details
+- API Reference
+- RegEx Details
+- About Further Formatting `name`
+- API Response Examples
+- Dependencies
+
+
 ### Project Details
 
-- Code language: `Java 11`
-- Built with: `Spring Boot` and `Maven`
-- Runs `Tomcat` on default port
+- `Java 11`
+- `Spring Boot 2` 
+- `Maven`
+- Runs `Tomcat` on default port (8080)
 
 ### API Reference
 
@@ -214,7 +259,7 @@ The application **produces** data in `json` format.
 
 ### RegEx Details
 
-<p id="ex5regex" align="justify"><code>RegEx</code> to match for the key <code>name</code>:</p>
+`RegEx` to match for the key `name`
 
 ```regexp
 ^(?!.*[\r\n])[\da-zA-Z ]+$
@@ -225,9 +270,9 @@ To match this `regex` it is necessary that:
 - Provided _String_ **IS NOT BLANK**.
 - Provided _String_ contains only **latin** letter(s) in **lower** or **UPPER** case or/and
   number(s) between **0** and **9** or/and space character(s).
-- Provided _String_ is single lined.
+- Provided _String_ has a single line.
 
-<h3 id="formatting">About Further Formatting <code>name</code>:</h3>
+### About Further Formatting `name`
 
 - Let's say we provide value: `%20L%20u%20%20c%20%20%20as%20%20`
   where `%20` is encoding for a space character.
@@ -238,12 +283,12 @@ To match this `regex` it is necessary that:
     - After each, **EXCEPT LAST** appended _String_, we append a singular space character additionally.
     - Formatted output looks like this: <code>L&nbsp;u&nbsp;c&nbsp;as</code>.
 
-> In shortcut, it can be said that every formatted value starts and ends with a latin letter or with a number,
+> In short, it can be said that every formatted value starts and ends with a latin letter or with a number,
 and between any pair (if exists) of the space characters, there is at least one latin letter or a number.
 
 ### API Response Examples
 
-<p id="ex5default">General:</p>
+General:
 
 ```json
 {
@@ -281,7 +326,7 @@ Examples:
 }
 ```
 
-> Note that it is still possible to force _API_ returning an error response.
+> Note that it is still possible to force the API to return an error response.
 
 ### Dependencies
 
@@ -294,23 +339,19 @@ Examples:
 [spring-boot-autoconfigure](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-autoconfigure/2.7.5)
 (2.7.5)
 
-<p align="right">
-<a href="#list">BACK TO PROJECTS LIST</a>
-</p>
-
-<h2 id="ex6">EX6-H2-STUDENTS</h2>
+## EX6-H2-STUDENTS
 
 <p align="justify">
-This project was focused on defining <b>Entity class</b> and <b>Spring Data JPA repositories</b> implementation.
-It was built additionally on <b>Spring Component class</b>, <b>Spring Configuration class</b> and 
-<b>Spring Service class</b>. <b>Configuration class</b> implements <i>CommandLineRunner interface</i> and 
-its method for providing execution of <b>business logic</b> defined in the <i>service class</i>, while the <i>component class</i> 
-is responsible for <b>value injection</b> from <i>properties file</i> using <code>@Value</code> <b>annotation</b>. 
-The value is used to define a number of students to create and add to the <b>repository</b>. Each student is created randomly 
-using some data from <code>Datafaker library</code>. For the presentation needs of <code>findBySurname(String)</code> method, 
-it has been guaranteed that for <b>n-students</b>, there are exactly <b>&lfloor;0,3*n&rfloor; students</b> named <i>Lopez</i>. 
-Each student <code>id</code> is <b>autogenerated</b> during entity creation. Created entities can be managed from 
-<code>H2 DBMS</code>. <i>Properties file</i> for this application looks as follows:
+This project was focused on defining <code>Entity class</code> and <code>Spring Data JPA</code> repositories implementation.
+It was built additionally with <b>Spring Component class</b>, <b>Spring Configuration class</b> and 
+<b>Spring Service class</b>. Configuration class implements <code>CommandLineRunner interface</code> and 
+its method for providing execution of <b>business logic</b> defined in the service class, while the component class
+is responsible for <code>value injection</code> from <b>properties file</b> using <code>@Value</code> annotation. 
+The value is used to define a number of students to create and add to the repository. Each student is created randomly 
+using data from <code>Datafaker</code> library. For the presentation needs of <code>findBySurname(String)</code> method, 
+it has been guaranteed that for <b>n-students</b>, there are exactly <code>&lfloor;0,3*n&rfloor; students</code> named <b>Lopez</b>. 
+Each student <code>id</code> is <b>autogenerated</b> during entity creation. Created entities can be managed by 
+<code>H2 DBMS</code>. <b>Properties file</b> for this project looks as follows:
 </p>
 
 ```properties
@@ -330,10 +371,18 @@ spring.datasource.username=sa
 spring.datasource.password=
 ```
 
+## Table Of Content
+
+- Project Details
+- Screenshots
+- Dependencies
+
+
 ### Project Details
 
-- Code language: `Java 11`
-- Built with: `Spring Boot` and `Maven`
+- `Java 11`
+- `Spring Boot 2` 
+- `Maven`
 - Runs `Tomcat` on port:`8080`
 - Properties file: [application.properties](./internship-adb/EX6-H2-STUDENTS/src/main/resources/application.properties)
 
@@ -370,15 +419,10 @@ spring.datasource.password=
 [H2 Database Engine](https://mvnrepository.com/artifact/com.h2database/h2/2.1.214)
 (2.1.214)
 
-<p align="right">
-<a href="#list">BACK TO PROJECTS LIST</a>
-</p>
-
-<h2 id="ex7">EX7-RESTAPI-H2-BUSSES</h2>
+## EX7-RESTAPI-H2-BUSSES
 
 <p align="justify">
-This project was focused on <i>Web API</i> implementation following <b>REST</b> architectural approach.
-The project is built from following components:
+This project was focused on simple <code>REST API</code> implementation. The project is built from following components:
 </p>
 
 - Spring Configuration class
@@ -396,26 +440,30 @@ The project is built from following components:
 
 - Bus conversion. Mapping **entities** to **model** representation (and vice versa).
 - Data generator for busses.
-- Validation for _String_ values.
-- Shuffling data from _data generator_ to ensure **pseudo-random** results.
+- Validation for `String` values.
+- Shuffling data to ensure **pseudo-random** results.
 
 **Handled exceptions** using `@ExceptionsHandler` annotation:
 
 - BusNotFound</b> - thrown, if it could not find a bus with given <code>id</code>.
 - BusAlreadyExists</b> - thrown, if it could not add a bus with given <code>id</code> (id already taken)
-- InvalidDataProvided</b> - thrown, if the required data of the request was invalid. Basically, whenever any of following
-  exceptions has been thrown:
-    - HttpMessageNotReadableException
-    - IllegalArgumentException
-    - NullPointerException
-    - PropertyValueException
 
 The application **consumes** and **produces** data in `json` format.
 
+## Table Of Content
+
+- Project Details
+- API Reference
+- RegEx Details
+- API Response Examples
+- Screenshots
+- Dependencies
+
 ### Project Details
 
-- Code language: `Java 11`
-- Built with: `Spring Boot` and `Maven`
+- `Java 11`
+- `Spring Boot 2` 
+- `Maven`
 - Runs `Tomcat` on port:`8080`
 - Properties file: [application.properties](./internship-adb/EX7-RESTAPI-H2-BUSSES/src/main/resources/application.properties)
 
@@ -431,9 +479,9 @@ The application **consumes** and **produces** data in `json` format.
   GET /busses?engine=String
 ```
 
-| Key       | Value    | Description                       |
-|:----------|:---------|:----------------------------------|
-| `engine`  | `String` | **Optional**. Type of bus engine. |
+| Key       | Value    | Description                                                              |
+|:----------|:---------|:-------------------------------------------------------------------------|
+| `engine`  | `String` | **Optional**. Type of bus engine. Must match one of Enum's String value. |
 
 ```text
   GET /busses/{id}
@@ -449,7 +497,7 @@ where `id` is a value of a non-negative integer.
   POST /busses
 ```
 
-- Valid **request body** pattern:
+- **Request body** pattern:
 
 ```text
 {
@@ -477,7 +525,7 @@ where `id` is a value of a non-negative integer.
 
 where `id` is a value of a non-negative integer.
 
-- Valid **request body** pattern:
+- **Request body** pattern:
 
 ```text
 {
@@ -509,8 +557,7 @@ where `id` is a value of a non-negative integer.
 
 ### RegEx Details
 
-<p id="ex7num-regex"><code>RegEx</code> to match for <code>id</code>, <code>seats</code>, <code>standingRoom</code> 
-and <code>length</code>:</p>
+`RegEx` to match for `id`, `seats`, `standingRoom` and `length`:
 
 ```regexp
 ^\d+$
@@ -520,7 +567,7 @@ Just a number or sequence of numbers between **0** and **9**.
 
 <br>
 
-<p id="ex7brand-regex"><code>RegEx</code> to match for <code>brand</code>:</p>
+`RegEx` to match for `brand`:
 
 ```regexp
 ^(?!.*[_\r\n])[a-zA-Z]([-a-zA-Z ]*[a-zA-Z])?$
@@ -528,17 +575,17 @@ Just a number or sequence of numbers between **0** and **9**.
 
 To match this `regex` it is necessary that:
 
-- Provided _String_ **IS NOT BLANK**.
-- Provided _String_ starts and ends with any **latin** letter in **lower**< or **UPPER** case.
-- Provided _String_ is single lined.
-- Every except **FIRST** and **LAST** index of provided _String_ can be:
+- Provided `String` **IS NOT BLANK**.
+- Provided `String` starts and ends with any **latin** letter in **lower** or **UPPER** case.
+- Provided `String` has a single line.
+- Every, except **FIRST** and **LAST**, index of provided `String` can be:
     - A **latin** letter in **lower** or **UPPER** case.
     - A space character.
     - A dash: <code>&#8212;</code>.
 
 <br>
 
-<p id="ex7model-regex"><code>RegEx</code> to match for <code>model</code>:</p>
+`RegEx` to match for `model`:
 
 ```regexp
 ^(?!.*[_\r\n])\w([-\w ]*\w)?$
@@ -546,11 +593,11 @@ To match this `regex` it is necessary that:
 
 To match this `regex` it is necessary that:
 
-- Provided _String_ **IS NOT BLANK**.
-- Provided _String_ starts and ends with a **latin** letter in **lower** or **UPPER** case or with any number between
+- Provided `String` **IS NOT BLANK**.
+- Provided `String` starts and ends with a **latin** letter in **lower** or **UPPER** case or with any number between
   **0** and **9**.
-- Provided _String_ is single lined.
-- Every except **FIRST** and **LAST** index of provided _String_ can be:
+- Provided `String` has a single line.
+- Every, except **FIRST** and **LAST**, index of provided `String` can be:
     - A **latin** letter in **lower** or **UPPER** case.
     - Any number between **0** and **9**.
     - A space character.
@@ -558,7 +605,7 @@ To match this `regex` it is necessary that:
 
 <br>
 
-<p id="ex7engine-regex"><code>RegEx</code> to match for <code>engine</code>:</p>
+`RegEx` to match for `engine`
 
 ```regexp
 ^((?i)\bdiesel\b+?|(?i)\belectric\b+?)*$
@@ -577,7 +624,7 @@ in <b>UPPER</b> or <b>lower</b> case.
 - [x] `GET /busses`
 
 
-- HTTP status: **_200 OK_**
+- HTTP status: `200 OK`
 - Response:
 
 ```json5
@@ -620,7 +667,7 @@ in <b>UPPER</b> or <b>lower</b> case.
 - [x] `GET /busses?engine=ELECTRIC`
 
 
-- HTTP status: **_200 OK_**
+- HTTP status: `200 OK`
 - Response:
 
 ```json5
@@ -663,7 +710,7 @@ in <b>UPPER</b> or <b>lower</b> case.
 - [x] `GET /busses/3`
 
 
-- HTTP status: **_200 OK_**
+- HTTP status: `200 OK`
 - Response:
 
 ```json
@@ -696,7 +743,7 @@ Request body:
 }
 ```
 
-- Http status: **_201 Created_**
+- Http status: `201 Created`
 - Response:
 
 ```json
@@ -729,7 +776,7 @@ Request body:
 }
 ```
 
-- Http status: **_200 OK_**
+- Http status: `200 OK`
 - Response:
 
 ```json
@@ -744,36 +791,39 @@ Request body:
 }
 ```
 
-As we can see, once value is assigned to `id`, the property became <b>immutable</b>.
+As we can see, once value is assigned to `id`, the property became **immutable**.
 
 <br>
 
 - [x] `DELETE /busses/20`
 
 
-- Http status: **_204 No content_**
+- Http status: `204 No Content`
 - Response:
 
 ```text
 
 ```
 
-The _response_ is `void`.
+The **response** has `no content`.
 
 <hr>
+
 <p align="center"><b>Now we are going to consider what happens if we do something wrong.</b></p>
+
+<br>
 
 - [ ] `GET /busses/engine=myEngine`
 
 
-- `myEngine` **DOES NOT MATCH** declared `regex`<a href="#ex7engine-regex">&#10548;</a>
-- HTTP status: **_400 Bad Request_**
+- `myEngine` **DOES NOT MATCH** declared `regex`
+- HTTP status: `422 Unprocessable Entity`
 - Response:
 
 ```json
 {
   "code": 3,
-  "message": "Something went wrong. Validate provided data."
+  "message": "Null not allowed."
 }
 ```
 
@@ -785,9 +835,8 @@ The _response_ is `void`.
 
 Path variable: `myId`
 
-- `myId` **DOES NOT MATCH** declared `regex`<a href="#ex7num-regex">&#10548;</a>, hence repository does not contain a bus
-  with such id.
-- HTTP status: **_404 Not Found_**
+- `myId` **DOES NOT MATCH** declared `regex`, hence repository does not contain a bus with such id.
+- HTTP status: `404 Not Found`
 - Response:
 
 ```json
@@ -800,7 +849,7 @@ Path variable: `myId`
 Path variable: `0`
 
 - We assume repository **DOES NOT CONTAIN** a bus with id: `0`
-- HTTP status: **_404 Not Found_**
+- HTTP status: `404 Not Found`
 - Response:
 
 ```json
@@ -828,7 +877,7 @@ Request body:
 }
 ```
 
-- HTTP status: **_409 Conflict_**
+- HTTP status: `409 Conflict`
 - Response:
 
 ```json
@@ -856,21 +905,21 @@ Request body:
 }
 ```
 
-- HTTP status: **_400 Bad Request_**
+- HTTP status: `422 Unprocessable Entity`
 - Response:
 
 ```json
 {
   "code": 3,
-  "message": "Something went wrong. Validate provided data."
+  "message": "Null not allowed."
 }
 ```
 
-since `a` **DOES NOT MATCH** declared `regex`.<a href="#ex7num-regex">&#10548;</a>
+since `a` **DOES NOT MATCH** declared `regex`.
 
 <br>
 
-_Now we assume that bus with `id=40` does not exist yet._
+**Now we assume that bus with `id=40` does not exist yet.**
 
 Request body:
 
@@ -886,17 +935,17 @@ Request body:
 }
 ```
 
-- HTTP status: **_400 Bad Request_**
+- HTTP status: `422 Unprocessable Entity`
 - Response:
 
 ```json
 {
   "code": 3,
-  "message": "Something went wrong. Validate provided data."
+  "message": "not-null property references a null or transient value : com.internship.adb.busses.persistence.entity.BusEntity.brand"
 }
 ```
 
-since `?` and `!` **DOES NOT MATCH** declared `regex`.<a href="#ex7brand-regex">&#10548;</a>
+since `?` and `!` **DOES NOT MATCH** declared `regex`.
 
 <br>
 
@@ -914,17 +963,17 @@ Request body:
 }
 ```
 
-- HTTP status: **_400 Bad Request_**
+- HTTP status: `400 Bad Request`
 - Response:
 
 ```json
 {
   "code": 3,
-  "message": "Something went wrong. Validate provided data."
+  "message": "JSON parse error: Cannot deserialize value of type `int` from String \"b\": not a valid `int` value; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `int` from String \"b\": not a valid `int` value\n at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 5, column: 12] (through reference chain: com.internship.adb.busses.model.BusModel[\"seats\"])"
 }
 ```
 
-since `b` and `c` and `d` **DOES NOT MATCH** declared `regex`.<a href="#ex7num-regex">&#10548;</a>
+since `b` and `c` and `d` **DOES NOT MATCH** declared `regex`.
 
 <br>
 
@@ -942,17 +991,17 @@ Request body:
 }
 ```
 
-- HTTP status: **_400 Bad Request_**
+- HTTP status: `422 Unprocessable Entity`
 - Response:
 
 ```json
 {
   "code": 3,
-  "message": "Something went wrong. Validate provided data."
+  "message": "Null not allowed."
 }
 ```
 
-since `String` value of `true` **DOES NOT MATCH** declared `regex`.<a href="#ex7engine-regex">&#10548;</a>
+since `String` value of `true` **DOES NOT MATCH** declared `regex`.
 
 <br>
 
@@ -969,17 +1018,33 @@ Request body:
 }
 ```
 
-- HTTP status: **_400 Bad Request_**
+- HTTP status: `422 Unprocessable Entity`
 - Response:
 
 ```json
 {
   "code": 3,
-  "message": "Something went wrong. Validate provided data."
+  "message": "Null not allowed."
 }
 ```
 
 since there is no occurrence of required `json property`. In this case it is no occurrence of `id`.
+
+<br>
+
+Missing Request Body:
+
+- HTTP status: `400 Bad Request`
+- Response:
+
+```json
+{
+    "code": 3,
+    "message": "Required request body is missing: public org.springframework.http.ResponseEntity<com.internship.adb.busses.model.BusModel> com.internship.adb.busses.controller.BusController.addBus(com.internship.adb.busses.model.BusModel)"
+}
+```
+
+since `request body` is required.
 
 ### Screenshots
 
@@ -1005,10 +1070,6 @@ since there is no occurrence of required `json property`. In this case it is no 
 
 [Hibernate Core](https://mvnrepository.com/artifact/org.hibernate/hibernate-core/5.6.12.Final)
 (5.6.12.Final)
-
-<p align="right">
-<a href="#list">BACK TO PROJECTS LIST</a>
-</p>
 
 ## Author
 
