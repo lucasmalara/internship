@@ -21,14 +21,14 @@ public class Student {
     @Setter(AccessLevel.NONE)
     private int id;
 
-    @Column(name = "name")
+    @Column
     private String name;
 
     @Getter
-    @Column(name = "surname")
+    @Column
     private String surname;
 
-    @Column(name = "age")
+    @Column
     private int age;
 
     public static Student randomStudent() {

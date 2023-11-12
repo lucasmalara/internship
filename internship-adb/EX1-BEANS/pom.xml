@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>internship-adb</artifactId>
-        <groupId>org.example</groupId>
+        <groupId>com.internship</groupId>
         <version>1.0</version>
     </parent>
 

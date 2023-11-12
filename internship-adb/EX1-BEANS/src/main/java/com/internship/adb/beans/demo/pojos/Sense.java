@@ -1,4 +1,4 @@
-package com.internship.adb.beans.sense.pojos;
+package com.internship.adb.beans.demo.pojos;
 
 abstract class Sense {
 

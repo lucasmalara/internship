@@ -25,8 +25,8 @@ public class CustomizedArrayList<E> extends ArrayList<E> {
             while(true) {
                 index++;
                 E e = it.next();
-                sb.append('[').append(index).append("] ");
-                sb.append(e == this ? "(this Collection)" : e);
+                sb.append('[').append(index).append("] ")
+                        .append(e == this ? "(this Collection)" : e);
                 if (!it.hasNext()) {
                     return sb.append(']').toString();
                 }

@@ -10,36 +10,34 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class BusController {
 
+    private final BusService busService;
+
     @Autowired
-    private BusService busService;
+    public BusController(BusService busService) {
+        this.busService = busService;
+    }
 
     @GetMapping("/busses")
-    @ResponseBody
-    public ResponseEntity<Iterable<BusModel>> getBusses() {
-        return new ResponseEntity<>(busService.getBusses(), HttpStatus.OK);
+    public ResponseEntity<Iterable<BusModel>> getBusses(@RequestParam(required = false)
+                                                        String engine) {
+        if (engine == null) {
+            return new ResponseEntity<>(busService.getBusses(), HttpStatus.OK);
+        } else
+            return new ResponseEntity<>(busService.getByEngineType(engine), HttpStatus.OK);
     }
 
     @GetMapping("/busses/{id}")
-    @ResponseBody
     public ResponseEntity<BusModel> getBus(@PathVariable(value = "id") String id) {
         return new ResponseEntity<>(busService.getBus(id), HttpStatus.OK);
     }
 
-    @GetMapping(params = "engine", value = "/busses")
-    @ResponseBody
-    public ResponseEntity<Iterable<BusModel>> getByEngineType(@RequestParam String engine) {
-        return new ResponseEntity<>(busService.getByEngineType(engine), HttpStatus.OK);
-    }
-
     @PostMapping("/busses")
-    @ResponseBody
     public ResponseEntity<BusModel> addBus(@RequestBody BusModel busModel) {
         busService.addBus(busModel);
         return new ResponseEntity<>(busModel, HttpStatus.CREATED);
     }
 
     @PutMapping("/busses/{id}")
-    @ResponseBody
     public ResponseEntity<BusModel> updateBus(@PathVariable(value = "id") String id,
                                               @RequestBody BusModel modifiedBusModel) {
         BusModel busModel = busService.updateBus(id, modifiedBusModel);
@@ -47,7 +45,6 @@ public class BusController {
     }
 
     @DeleteMapping("/busses/{id}")
-    @ResponseBody
     public ResponseEntity<Void> deleteBus(@PathVariable(value = "id") String id) {
         busService.deleteBus(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);

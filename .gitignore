@@ -6,7 +6,10 @@
 target/
 
 ### Maven ###
-.mvn
+.mvn/
 mvnw
 mvnw.cmd
 HELP.md
+
+### VSCode ###
+.vscode/

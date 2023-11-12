@@ -9,11 +9,11 @@ public class Fridge implements CoolingSystem {
     private static final int UP_LIMIT = 5;
     private static final int THRESHOLD_TO_FREEZING_MODE = ((DOWN_LIMIT + UP_LIMIT) / 2) - 1;
 
-    public static int getMinDegreeLimit() {
+    public static int getMinDegree() {
         return DOWN_LIMIT;
     }
 
-    public static int getMaxDegreeLimit() {
+    public static int getMaxDegree() {
         return UP_LIMIT;
     }
 

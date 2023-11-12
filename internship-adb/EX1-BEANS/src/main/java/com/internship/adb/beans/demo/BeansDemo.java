@@ -1,15 +1,15 @@
-package com.internship.adb.beans.sense;
+package com.internship.adb.beans.demo;
 
-import com.internship.adb.beans.sense.component.Config;
-import com.internship.adb.beans.sense.pojos.Imagination;
-import com.internship.adb.beans.sense.pojos.Reality;
+import com.internship.adb.beans.demo.component.ComponentDemo;
+import com.internship.adb.beans.demo.pojos.Imagination;
+import com.internship.adb.beans.demo.pojos.Reality;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.io.*;
 import java.time.LocalDate;
 import java.util.Properties;
 
-public class BeansTest {
+public class BeansDemo {
 
     static final String DATE = "date";
     static final String JAVA_VERSION = "java-version";
@@ -19,7 +19,7 @@ public class BeansTest {
     static final String PROPERTIES = String.format(RESOURCES_PATH, PROPERTIES_NAME);
 
     public static void main(final String[] args) {
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ComponentDemo.class);
         final Imagination imaginationBean = context.getBean(Imagination.class);
         final Reality realityBean = context.getBean(Reality.class);
         context.close();

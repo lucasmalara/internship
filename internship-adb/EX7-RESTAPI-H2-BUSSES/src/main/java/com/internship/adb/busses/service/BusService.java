@@ -17,8 +17,12 @@ import java.util.stream.Collectors;
 @Service
 public class BusService {
 
+    private final BusRepository busRepository;
+
     @Autowired
-    private BusRepository busRepository;
+    public BusService(BusRepository busRepository) {
+        this.busRepository = busRepository;
+    }
 
     public Iterable<BusModel> getBusses() {
         final List<BusEntity> busses = busRepository.findAll();

@@ -13,15 +13,15 @@ public class AirConditioning implements CoolingSystem {
     private static final int THRESHOLD_EXTRA_COOLING_MODE = ((UP_LIMIT - DOWN_LIMIT) / 2) + DOWN_LIMIT;
 
     @Autowired
-    public AirConditioning(boolean mobility) {
-        this.isMobile = mobility;
+    public AirConditioning(boolean isMobile) {
+        this.isMobile = isMobile;
     }
 
-    public static int getMinDegreeLimit() {
+    public static int getMinDegree() {
         return DOWN_LIMIT;
     }
 
-    public static int getMaxDegreeLimit() {
+    public static int getMaxDegree() {
         return UP_LIMIT;
     }
 
@@ -84,7 +84,7 @@ public class AirConditioning implements CoolingSystem {
     public void turnOn() {
         if (!this.isOn) {
             this.isOn = true;
-            System.out.println("Turned on air conditioning.");
+            System.out.println("Turned on an air conditioning.");
         }
     }
 
@@ -92,7 +92,7 @@ public class AirConditioning implements CoolingSystem {
     public void turnOff() {
         if (this.isOn) {
             this.isOn = false;
-            System.out.println("Turned off air conditioning.");
+            System.out.println("Turned off an air conditioning.");
         }
     }
 

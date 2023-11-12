@@ -17,7 +17,8 @@ public class ScheduleTask {
     public void printRandomFact() throws IOException, InterruptedException {
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=1"))
+                // API seems to be no longer maintained...
+                .uri(URI.create("https://dog-facts-api.herokuapp.com/api/v1/resources/dogs/all"))
                 .build();
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 

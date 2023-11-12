@@ -1,4 +1,4 @@
-package com.internship.adb.beans.sense.pojos;
+package com.internship.adb.beans.demo.pojos;
 
 public final class Imagination extends Sense {
 

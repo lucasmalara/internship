@@ -6,30 +6,31 @@ import com.internship.adb.beans.cooling.systems.template.Fridge;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.util.Assert;
 
 @SpringBootApplication
-public class BeansTest {
+public class AnotherBeansDemo {
 
     public static void main(String[] args) {
-        ConfigurableApplicationContext context = SpringApplication.run(BeansTest.class, args);
+        ConfigurableApplicationContext context = SpringApplication.run(AnotherBeansDemo.class, args);
         CoolingSystem coolingSystem = context.getBean(CoolingSystem.class);
         final String dashes = "----";
         Fridge fridge = coolingSystem instanceof Fridge ? ((Fridge) coolingSystem) : null;
         AirConditioning airConditioning = context.getBean("airConditioning", AirConditioning.class);
 
         // to assert it does not throw exceptions
-        context.getBean("airConditioningAlt", CoolingSystem.class);
+        Assert.notNull(context.getBean("airConditioningAlt", CoolingSystem.class), "Everything's fine...");
 
         context.close();
 
-        // since fridge is a primary bean it is not a null reference
+        // since fridge is a primary bean it is not a null
         if (fridge != null) {
             System.out.println("\n" + dashes + fridge.getClass().getSimpleName() + " Bean" + dashes);
             fridge.turnOn();
             System.out.print("Is fridge on? ");
             getAnswer(fridge.isOn());
-            fridge.changeTemperature(Fridge.getMinDegreeLimit() - 1);
-            fridge.changeTemperature(Fridge.getMaxDegreeLimit());
+            fridge.changeTemperature(Fridge.getMinDegree() - 1);
+            fridge.changeTemperature(Fridge.getMaxDegree());
             fridge.setToFreezingMode(true);
             System.out.print("Is freezing mode on? ");
             getAnswer(fridge.isInFreezingMode());
@@ -41,8 +42,8 @@ public class BeansTest {
         airConditioning.turnOn();
         System.out.print("Is air conditioning mobile? ");
         getAnswer(airConditioning.isMobile());
-        airConditioning.changeTemperature(AirConditioning.getMaxDegreeLimit() + 1);
-        airConditioning.changeTemperature(AirConditioning.getMinDegreeLimit());
+        airConditioning.changeTemperature(AirConditioning.getMaxDegree() + 1);
+        airConditioning.changeTemperature(AirConditioning.getMinDegree());
         airConditioning.setToExtraCoolingMode();
         System.out.print("Is extra-cooling mode on? ");
         getAnswer(airConditioning.isInExtraCoolingMode());

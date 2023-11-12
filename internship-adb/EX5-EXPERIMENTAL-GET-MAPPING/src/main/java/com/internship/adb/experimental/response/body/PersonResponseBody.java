@@ -1,14 +1,11 @@
-package com.internship.adb.experimental.reponse.body;
+package com.internship.adb.experimental.response.body;
 
 import com.internship.adb.experimental.model.Person;
-import lombok.AccessLevel;
 import lombok.Getter;
 
-@Getter
 public class PersonResponseBody {
-    private final Long id;
-    private final String message;
-    @Getter(AccessLevel.NONE)
+    @Getter private final Long id;
+    @Getter private final String message;
     private static final String INTRODUCE = "Hello %s. It's nice to meet you.";
 
     public PersonResponseBody(Person person) {

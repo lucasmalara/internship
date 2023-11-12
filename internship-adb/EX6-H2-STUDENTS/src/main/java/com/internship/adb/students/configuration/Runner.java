@@ -17,15 +17,19 @@ import static com.internship.adb.students.utils.StudentAgeGenerator.getMIN_AGE;
 @Configuration
 public class Runner implements CommandLineRunner {
 
-    @Autowired
-    private ValueGetter valueGetter;
+    private final ValueGetter valueGetter;
 
-    @Autowired
-    private StudentService studentService;
+    private final StudentService studentService;
 
     private final List<Student> localStudents = new ArrayList<>();
 
     private static final String SURNAME = "Lopez";
+
+    @Autowired
+    public Runner(ValueGetter valueGetter, StudentService studentService) {
+        this.valueGetter = valueGetter;
+        this.studentService = studentService;
+    }
 
     @Override
     public void run(String... args) {
