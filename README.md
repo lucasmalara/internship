@@ -23,33 +23,33 @@ Dependencies were updated since the creation of each project, but only up to a c
 - EX6-H2-STUDENTS
 - EX7-RESTAPI-H2-BUSSES
 
-## Table Of Content
+## TABLE OF CONTENT
 
-- EX1-BEANS
+- **EX1-BEANS**
   - Project Details
   - Dependencies
-- EX2-BEANS
+- **EX2-BEANS**
   - Project Details
   - Dependencies
-- EX3-SCHEDULING
-    - Project Details
-    - Dependencies
-- EX4-STREAM-API-JUNIT-TESTS
-    - Project Details
+- **EX3-SCHEDULING**
+  - Project Details
+  - Dependencies
+- **EX4-STREAM-API-JUNIT-TESTS**
+  - Project Details
   - Class Hierarchy Tree
   - Dependencies
-- EX5-EXPERIMENTAL-GET-MAPPING
+- **EX5-EXPERIMENTAL-GET-MAPPING**
   - Project Details
   - API Reference
   - RegEx Details
   - About Further Formatting `name`
   - API Response Examples
   - Dependencies
-- EX6-H2-STUDENTS
+- **EX6-H2-STUDENTS**
   - Project Details
   - Screenshots
   - Dependencies
-- EX7-RESTAPI-H2-BUSSES
+- **EX7-RESTAPI-H2-BUSSES**
   - Project Details
   - API Reference
   - RegEx Details
@@ -74,7 +74,7 @@ java-version=11.0.11
 program-version=1.0
 ```
 
-where `date` is computed locally by current date - `LocalDate().now` and `java-version` is an **sdk** version.
+where `date` is computed locally by current date - `java.time.LocalDate().now` and `java-version` is an `sdk` version.
 
 ### Table Of Content
 
@@ -83,15 +83,17 @@ where `date` is computed locally by current date - `LocalDate().now` and `java-v
 
 ### Project Details
 
-- `Java 11`
+- `Java 11 (LTS)`
 - `Spring 5`
 - `Maven`
 - Properties file: [custom.properties](./internship-adb/EX1-BEANS/src/main/resources/custom.properties)
 
 ### Dependencies
 
-[spring-context](https://mvnrepository.com/artifact/org.springframework/spring-context/5.3.23)
-(5.3.23)
+|                                           ArtifactId                                           | Version |
+|:----------------------------------------------------------------------------------------------:|:-------:|
+| [spring-context](https://mvnrepository.com/artifact/org.springframework/spring-context/5.3.23) | 5.3.23  |
+
 
 ## EX2-BEANS
 
@@ -109,23 +111,23 @@ The injection takes place in a method parameter of the other bean. The project a
 
 ### Project Details
 
-- `Java 11`
+- `Java 11 (LTS)`
 - `Spring Boot 2`
 - `Maven`
 
 ### Dependencies
 
-[spring-boot-starter](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter/2.7.5)
-(2.7.5)
+|                                                        ArtifactId                                                        | Version |
+|:------------------------------------------------------------------------------------------------------------------------:|:-------:|
+|       [spring-boot-starter](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter/2.7.5)       |  2.7.5  |
+| [spring-boot-autoconfigure](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-autoconfigure/2.7.5) |  2.7.5  |
 
-[spring-boot-autoconfigure](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-autoconfigure/2.7.5)
-(2.7.5)
 
 ## EX3-SCHEDULING
 
 <p align="justify">
 This project has shown how to <b>schedule</b> a task with <b>Spring</b> using <code>@Scheduled</code> <b>annotation</b>. 
-The task was focused on sending <code>GET</code> requests to chosen <code>Web API</code> and process its response. <br>
+The task was focused on sending <code>GET</code> requests to chosen <code>Web API</code> and process each response. <br>
 </p>
 
 <h3 align="center">UPDATE 12.11.2023: API seems to be no longer maintained.</h3>
@@ -147,18 +149,17 @@ The task was focused on sending <code>GET</code> requests to chosen <code>Web AP
 
 ### Project Details
 
-- `Java 11`
+- `Java 11 (LTS)`
 - `Spring Boot 2` 
 - `Maven`
 - [API Docs](https://dukengn.github.io/Dog-facts-API/)
 
 ### Dependencies
 
-[spring-boot-starter](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter/2.7.5)
-(2.7.5)
-
-[spring-boot-autoconfigure](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-autoconfigure/2.7.5)
-(2.7.5)
+|                                                        ArtifactId                                                        | Version |
+|:------------------------------------------------------------------------------------------------------------------------:|:-------:|
+|       [spring-boot-starter](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter/2.7.5)       |  2.7.5  |
+| [spring-boot-autoconfigure](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-autoconfigure/2.7.5) |  2.7.5  |
 
 ## EX4-STREAM-API-JUNIT-TESTS
 
@@ -176,7 +177,7 @@ implementation of <b>dogs</b> and <b>cats</b>.
 
 ### Project Details
 
-- `Java 11`
+- `Java 11 (LTS)`
 - `Maven`
 - [Unit tests](./internship-adb/EX4-STREAM-API-JUNIT-TESTS/src/test/java/StreamTest.java)
 
@@ -198,14 +199,11 @@ implementation of <b>dogs</b> and <b>cats</b>.
 
 ### Dependencies
 
-[Lombok](https://projectlombok.org/)
-(1.18.24)
-
-[JUnit Jupiter API](https://junit.org/junit5/docs/5.9.0/api/org.junit.jupiter.api/module-summary.html)
-(5.9.0)
-
-[JUnit Jupiter Params](https://junit.org/junit5/docs/5.9.0/api/org.junit.jupiter.params/module-summary.html)
-(5.9.0)
+|                                                  ArtifactId                                                  | Version |
+|:------------------------------------------------------------------------------------------------------------:|:-------:|
+|                                     [lombok](https://projectlombok.org/)                                     | 1.18.24 |
+|    [JUnit Jupiter API](https://junit.org/junit5/docs/5.9.0/api/org.junit.jupiter.api/module-summary.html)    |  5.9.0  |
+| [JUnit Jupiter Params](https://junit.org/junit5/docs/5.9.0/api/org.junit.jupiter.params/module-summary.html) |  5.9.0  |
 
 ## EX5-EXPERIMENTAL-GET-MAPPING
 
@@ -238,10 +236,10 @@ The application **produces** data in `json` format.
 
 ### Project Details
 
-- `Java 11`
+- `Java 11 (LTS)`
 - `Spring Boot 2` 
 - `Maven`
-- Runs `Tomcat` on default port (8080)
+- Runs `Tomcat` on default configuration (port 8080)
 
 ### API Reference
 
@@ -330,14 +328,12 @@ Examples:
 
 ### Dependencies
 
-[Lombok](https://projectlombok.org/)
-(1.18.24)
+|                                                        ArtifactId                                                        | Version |
+|:------------------------------------------------------------------------------------------------------------------------:|:-------:|
+|                                           [lombok](https://projectlombok.org/)                                           | 1.18.24 |
+|   [spring-boot-starter-web](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web/2.7.5)   |  2.7.5  |
+| [spring-boot-autoconfigure](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-autoconfigure/2.7.5) |  2.7.5  |
 
-[spring-boot-starter-web](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web/2.7.5)
-(2.7.5)
-
-[spring-boot-autoconfigure](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-autoconfigure/2.7.5)
-(2.7.5)
 
 ## EX6-H2-STUDENTS
 
@@ -380,7 +376,7 @@ spring.datasource.password=
 
 ### Project Details
 
-- `Java 11`
+- `Java 11 (LTS)`
 - `Spring Boot 2` 
 - `Maven`
 - Runs `Tomcat` on port:`8080`
@@ -398,26 +394,15 @@ spring.datasource.password=
 
 ### Dependencies:
 
-[Datafaker](https://www.datafaker.net/documentation/getting-started/)
-(1.7.0)
-
-[Lombok](https://projectlombok.org/)
-(1.18.24)
-
-[spring-context](https://mvnrepository.com/artifact/org.springframework/spring-context/5.3.23)
-(5.3.23)
-
-[spring-boot](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot/2.7.5)
-(2.7.5)
-
-[spring-boot-starter-web](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web/2.7.5)
-(2.7.5)
-
-[spring-boot-starter-data-jpa](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa/2.7.5)
-(2.7.5)
-
-[H2 Database Engine](https://mvnrepository.com/artifact/com.h2database/h2/2.1.214)
-(2.1.214)
+|                                                           ArtifactId                                                           | Version |
+|:------------------------------------------------------------------------------------------------------------------------------:|:-------:|
+|                             [datafaker](https://www.datafaker.net/documentation/getting-started/)                              |  1.7.0  |
+|                                              [lombok](https://projectlombok.org/)                                              | 1.18.24 |
+|                 [spring-context](https://mvnrepository.com/artifact/org.springframework/spring-context/5.3.23)                 | 5.3.23  |
+|                  [spring-boot](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot/2.7.5)                  |  2.7.5  |
+|      [spring-boot-starter-web](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web/2.7.5)      |  2.7.5  |
+| [spring-boot-starter-data-jpa](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa/2.7.5) |  2.7.5  |
+|                               [h2](https://mvnrepository.com/artifact/com.h2database/h2/2.1.214)                               | 2.1.214 |
 
 ## EX7-RESTAPI-H2-BUSSES
 
@@ -461,7 +446,7 @@ The application **consumes** and **produces** data in `json` format.
 
 ### Project Details
 
-- `Java 11`
+- `Java 11 (LTS)`
 - `Spring Boot 2` 
 - `Maven`
 - Runs `Tomcat` on port:`8080`
@@ -1056,20 +1041,13 @@ since `request body` is required.
 
 ### Dependencies
 
-[Lombok](https://projectlombok.org/)
-(1.18.24)
-
-[spring-boot-starter-web](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web/2.7.5)
-(2.7.5)
-
-[spring-boot-starter-data-jpa](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa/2.7.5)
-(2.7.5)
-
-[H2 Database Engine](https://mvnrepository.com/artifact/com.h2database/h2/2.1.214)
-(2.1.214)
-
-[Hibernate Core](https://mvnrepository.com/artifact/org.hibernate/hibernate-core/5.6.12.Final)
-(5.6.12.Final)
+|                                                           ArtifactId                                                           |   Version    |
+|:------------------------------------------------------------------------------------------------------------------------------:|:------------:|
+|                                              [lombok](https://projectlombok.org/)                                              |   1.18.24    |
+|      [spring-boot-starter-web](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web/2.7.5)      |    2.7.5     |
+| [spring-boot-starter-data-jpa](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa/2.7.5) |    2.7.5     |
+|                               [h2](https://mvnrepository.com/artifact/com.h2database/h2/2.1.214)                               |   2.1.214    |
+|                 [hibernate-core](https://mvnrepository.com/artifact/org.hibernate/hibernate-core/5.6.12.Final)                 | 5.6.12.Final |
 
 ## Author
 
