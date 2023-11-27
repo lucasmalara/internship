@@ -20,10 +20,8 @@ public class BusController {
     @GetMapping("/busses")
     public ResponseEntity<Iterable<BusModel>> getBusses(@RequestParam(required = false)
                                                         String engine) {
-        if (engine == null) {
-            return new ResponseEntity<>(busService.getBusses(), HttpStatus.OK);
-        } else
-            return new ResponseEntity<>(busService.getByEngineType(engine), HttpStatus.OK);
+        if (engine == null) return new ResponseEntity<>(busService.getBusses(), HttpStatus.OK);
+        return new ResponseEntity<>(busService.getByEngineType(engine), HttpStatus.OK);
     }
 
     @GetMapping("/busses/{id}")

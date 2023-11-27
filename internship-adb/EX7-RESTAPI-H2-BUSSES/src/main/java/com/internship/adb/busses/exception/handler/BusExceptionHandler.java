@@ -19,17 +19,17 @@ public class BusExceptionHandler {
 
     @ExceptionHandler(BusException.class)
     public ResponseEntity<ErrorResponse> handleBusExceptions(final BusException exc) {
-        ErrorResponse errorResponse = new ErrorResponse();
         HttpStatus status = HttpStatus.INTERNAL_SERVER_ERROR;
-        if(exc instanceof BusNotFoundException) {
-            errorResponse.setCode(BUS_NOT_FOUND);
+        int code = 0;
+        if (exc instanceof BusNotFoundException) {
+            code = BUS_NOT_FOUND;
             status = HttpStatus.NOT_FOUND;
-        } else if(exc instanceof BusAlreadyExistsException) {
-            errorResponse.setCode(BUS_EXISTS);
+        } else if (exc instanceof BusAlreadyExistsException) {
+            code = BUS_EXISTS;
             status = HttpStatus.CONFLICT;
         }
-            errorResponse.setMessage(exc.getMessage());
-        return new ResponseEntity<>(errorResponse,status);
+        ErrorResponse errorResponse = prepareErrorResponse(code, exc.getMessage());
+        return new ResponseEntity<>(errorResponse, status);
     }
 
 
@@ -64,8 +64,12 @@ public class BusExceptionHandler {
     }
 
     private ErrorResponse prepareInvalidRequest(String message) {
+        return prepareErrorResponse(INVALID_REQUEST, message);
+    }
+
+    private ErrorResponse prepareErrorResponse(int status, String message) {
         ErrorResponse errorResponse = new ErrorResponse();
-        errorResponse.setCode(INVALID_REQUEST);
+        errorResponse.setCode(status);
         errorResponse.setMessage(message);
         return errorResponse;
     }

@@ -27,6 +27,10 @@ public class BusConverter {
     public static BusEntity convertToBusEntity(BusModel busModel) {
         BusEntity busEntity = new BusEntity();
         busEntity.setExternalId(busModel.getId());
+        return convertToBusEntity(busEntity, busModel);
+    }
+
+    public static BusEntity convertToBusEntity(BusEntity busEntity, BusModel busModel) {
         busEntity.setBrand(busModel.getBrand());
         busEntity.setModel(busModel.getModel());
         busEntity.setLength(busModel.getLength());

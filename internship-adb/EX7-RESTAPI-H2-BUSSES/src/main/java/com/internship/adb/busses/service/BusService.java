@@ -12,7 +12,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Service
 public class BusService {
@@ -25,15 +24,16 @@ public class BusService {
     }
 
     public Iterable<BusModel> getBusses() {
-        final List<BusEntity> busses = busRepository.findAll();
+        List<BusEntity> busses = busRepository.findAll();
         return BusConverter.convertToBussesModel(busses);
     }
 
     public BusModel getBus(String id) {
-        Optional<BusEntity> optionalBusEntity = Optional.ofNullable(busRepository.findByExternalId(id));
+        Optional<BusEntity> optionalBusEntity = busRepository.findByExternalId(id);
         if (optionalBusEntity.isEmpty()) {
             throw new BusNotFoundException(id);
-        } else return BusConverter.convertToBusModel(optionalBusEntity.get());
+        }
+        return BusConverter.convertToBusModel(optionalBusEntity.get());
     }
 
     public Iterable<BusModel> getByEngineType(String engineType) {
@@ -44,51 +44,38 @@ public class BusService {
 
     public void addBus(BusModel busModel) {
         BusEntity busEntity = BusConverter.convertToBusEntity(busModel);
-        List<String> allIDs = busRepository.findAll()
-                .stream()
-                .map(BusEntity::getExternalId)
-                .collect(Collectors.toUnmodifiableList());
         String extractedId = busEntity.getExternalId();
-        if(allIDs.contains(extractedId)) {
+        if (doesBusAlreadyExist(extractedId)) {
             throw new BusAlreadyExistsException(extractedId);
-        } else busRepository.save(busEntity);
+        }
+        busRepository.save(busEntity);
+    }
+
+    public boolean doesBusAlreadyExist(String externalId) {
+        Optional<BusEntity> byExternalId = busRepository.findByExternalId(externalId);
+        return byExternalId.isPresent();
     }
 
     public void addBusses(Iterable<BusModel> bussesModel) {
-        Iterable<BusEntity> busEntities = BusConverter.convertToBussesEntities(bussesModel);
-        List<String> allIDs = busRepository.findAll()
-                .stream()
-                .map(BusEntity::getExternalId)
-                .collect(Collectors.toUnmodifiableList());
-        for (BusEntity busEntity : busEntities) {
-            String extractedId = busEntity.getExternalId();
-            if(allIDs.contains(extractedId)) {
-                throw new BusAlreadyExistsException(extractedId);
-            } else busRepository.saveAll(busEntities);
-        }
+        bussesModel.forEach(this::addBus);
     }
 
     public BusModel updateBus(String id, BusModel modifiedBusModel) {
-        Optional<BusEntity> optionalBusEntity = Optional.ofNullable(busRepository.findByExternalId(id));
+        Optional<BusEntity> optionalBusEntity = busRepository.findByExternalId(id);
         if (optionalBusEntity.isEmpty()) {
             throw new BusNotFoundException(id);
-        } else {
-            BusEntity busEntity = optionalBusEntity.get();
-            busEntity.setModel(modifiedBusModel.getModel());
-            busEntity.setBrand(modifiedBusModel.getBrand());
-            busEntity.setSeats(modifiedBusModel.getSeats());
-            busEntity.setStandingRoom(modifiedBusModel.getStandingRoom());
-            busEntity.setLength(modifiedBusModel.getLength());
-            busEntity.setEngineType(EngineEntityType.valueOf(modifiedBusModel.getEngine().name()));
-            busRepository.save(busEntity);
-            return BusConverter.convertToBusModel(busEntity);
         }
+        BusEntity busEntity = optionalBusEntity.get();
+        BusEntity updatedBusEntity = BusConverter.convertToBusEntity(busEntity, modifiedBusModel);
+        busRepository.save(updatedBusEntity);
+        return BusConverter.convertToBusModel(updatedBusEntity);
     }
 
     public void deleteBus(String id) {
-        Optional<BusEntity> optionalBusEntity = Optional.ofNullable(busRepository.findByExternalId(id));
+        Optional<BusEntity> optionalBusEntity = busRepository.findByExternalId(id);
         if (optionalBusEntity.isEmpty()) {
             throw new BusNotFoundException(id);
-        } else busRepository.delete(optionalBusEntity.get());
+        }
+        busRepository.delete(optionalBusEntity.get());
     }
 }
