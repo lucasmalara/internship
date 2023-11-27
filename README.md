@@ -13,43 +13,33 @@ improved in terms of code quality after self-reviewing the code. However, the ge
 Dependencies were updated since the creation of each project, but only up to a certain point.
 </p>
 
-## LIST OF PROJECTS
-
-- EX1-BEANS
-- EX2-BEANS
-- EX3-SCHEDULING
-- EX4-STREAM-API-JUNIT-TESTS
-- EX5-EXPERIMENTAL-GET-MAPPING
-- EX6-H2-STUDENTS
-- EX7-RESTAPI-H2-BUSSES
-
 ## TABLE OF CONTENT
 
-- **EX1-BEANS**
+- [**EX1-BEANS**](#ex1-beans)
   - Project Details
   - Dependencies
-- **EX2-BEANS**
+- [**EX2-BEANS**](#ex2-beans)
   - Project Details
   - Dependencies
-- **EX3-SCHEDULING**
+- [**EX3-SCHEDULING**](#ex3-scheduling)
   - Project Details
   - Dependencies
-- **EX4-STREAM-API-JUNIT-TESTS**
+- [**EX4-STREAM-API-JUNIT-TESTS**](#ex4-stream-api-junit-tests)
   - Project Details
   - Class Hierarchy Tree
   - Dependencies
-- **EX5-EXPERIMENTAL-GET-MAPPING**
+- [**EX5-EXPERIMENTAL-GET-MAPPING**](#ex5-experimental-get-mapping)
   - Project Details
   - API Reference
   - RegEx Details
   - About Further Formatting `name`
   - API Response Examples
   - Dependencies
-- **EX6-H2-STUDENTS**
+- [**EX6-H2-STUDENTS**](#ex6-h2-students)
   - Project Details
   - Screenshots
   - Dependencies
-- **EX7-RESTAPI-H2-BUSSES**
+- [**EX7-RESTAPI-H2-BUSSES**](#ex7-restapi-h2-busses)
   - Project Details
   - API Reference
   - RegEx Details
@@ -94,6 +84,9 @@ where `date` is computed locally by current date - `java.time.LocalDate().now` a
 |:----------------------------------------------------------------------------------------------:|:-------:|
 | [spring-context](https://mvnrepository.com/artifact/org.springframework/spring-context/5.3.23) | 5.3.23  |
 
+<div align="right">
+  <a href="#table-of-content">BACK TO PROJECTS LIST</a>
+</div>
 
 ## EX2-BEANS
 
@@ -122,6 +115,9 @@ The injection takes place in a method parameter of the other bean. The project a
 |       [spring-boot-starter](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter/2.7.5)       |  2.7.5  |
 | [spring-boot-autoconfigure](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-autoconfigure/2.7.5) |  2.7.5  |
 
+<div align="right">
+  <a href="#table-of-content">BACK TO PROJECTS LIST</a>
+</div>
 
 ## EX3-SCHEDULING
 
@@ -160,6 +156,10 @@ The task was focused on sending <code>GET</code> requests to chosen <code>Web AP
 |:------------------------------------------------------------------------------------------------------------------------:|:-------:|
 |       [spring-boot-starter](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter/2.7.5)       |  2.7.5  |
 | [spring-boot-autoconfigure](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-autoconfigure/2.7.5) |  2.7.5  |
+
+<div align="right">
+  <a href="#table-of-content">BACK TO PROJECTS LIST</a>
+</div>
 
 ## EX4-STREAM-API-JUNIT-TESTS
 
@@ -204,6 +204,10 @@ implementation of <b>dogs</b> and <b>cats</b>.
 |                                     [lombok](https://projectlombok.org/)                                     | 1.18.24 |
 |    [JUnit Jupiter API](https://junit.org/junit5/docs/5.9.0/api/org.junit.jupiter.api/module-summary.html)    |  5.9.0  |
 | [JUnit Jupiter Params](https://junit.org/junit5/docs/5.9.0/api/org.junit.jupiter.params/module-summary.html) |  5.9.0  |
+
+<div align="right">
+  <a href="#table-of-content">BACK TO PROJECTS LIST</a>
+</div>
 
 ## EX5-EXPERIMENTAL-GET-MAPPING
 
@@ -334,6 +338,9 @@ Examples:
 |   [spring-boot-starter-web](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web/2.7.5)   |  2.7.5  |
 | [spring-boot-autoconfigure](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-autoconfigure/2.7.5) |  2.7.5  |
 
+<div align="right">
+  <a href="#table-of-content">BACK TO PROJECTS LIST</a>
+</div>
 
 ## EX6-H2-STUDENTS
 
@@ -404,6 +411,10 @@ spring.datasource.password=
 | [spring-boot-starter-data-jpa](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa/2.7.5) |  2.7.5  |
 |                               [h2](https://mvnrepository.com/artifact/com.h2database/h2/2.1.214)                               | 2.1.214 |
 
+<div align="right">
+  <a href="#table-of-content">BACK TO PROJECTS LIST</a>
+</div>
+
 ## EX7-RESTAPI-H2-BUSSES
 
 <p align="justify">
@@ -413,7 +424,7 @@ This project was focused on simple <code>REST API</code> implementation. The pro
 - Spring Configuration class
 - Spring Rest Controller class
 - Spring Service class
-- Spring Data JPA repositories
+- Spring Data JPA repository
 - Spring Rest Controller Adviser class
 - Exception classes
 - Response Body class
@@ -432,6 +443,7 @@ This project was focused on simple <code>REST API</code> implementation. The pro
 
 - BusNotFound</b> - thrown, if it could not find a bus with given <code>id</code>.
 - BusAlreadyExists</b> - thrown, if it could not add a bus with given <code>id</code> (id already taken)
+- And others
 
 The application **consumes** and **produces** data in `json` format.
 
@@ -1048,6 +1060,10 @@ since `request body` is required.
 | [spring-boot-starter-data-jpa](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa/2.7.5) |    2.7.5     |
 |                               [h2](https://mvnrepository.com/artifact/com.h2database/h2/2.1.214)                               |   2.1.214    |
 |                 [hibernate-core](https://mvnrepository.com/artifact/org.hibernate/hibernate-core/5.6.12.Final)                 | 5.6.12.Final |
+
+<div align="right">
+  <a href="#table-of-content">BACK TO PROJECTS LIST</a>
+</div>
 
 ## Author
 
