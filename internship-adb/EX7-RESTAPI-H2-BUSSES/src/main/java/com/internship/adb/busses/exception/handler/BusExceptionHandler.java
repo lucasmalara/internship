@@ -1,7 +1,6 @@
 package com.internship.adb.busses.exception.handler;
 
 import com.internship.adb.busses.exception.BusAlreadyExistsException;
-import com.internship.adb.busses.exception.BusException;
 import com.internship.adb.busses.exception.BusNotFoundException;
 import com.internship.adb.busses.exception.response.body.ErrorResponse;
 import org.hibernate.PropertyValueException;
@@ -17,19 +16,16 @@ public class BusExceptionHandler {
     private static final int BUS_EXISTS = 2;
     private static final int INVALID_REQUEST = 3;
 
-    @ExceptionHandler(BusException.class)
-    public ResponseEntity<ErrorResponse> handleBusExceptions(final BusException exc) {
-        HttpStatus status = HttpStatus.INTERNAL_SERVER_ERROR;
-        int code = 0;
-        if (exc instanceof BusNotFoundException) {
-            code = BUS_NOT_FOUND;
-            status = HttpStatus.NOT_FOUND;
-        } else if (exc instanceof BusAlreadyExistsException) {
-            code = BUS_EXISTS;
-            status = HttpStatus.CONFLICT;
-        }
-        ErrorResponse errorResponse = prepareErrorResponse(code, exc.getMessage());
-        return new ResponseEntity<>(errorResponse, status);
+    @ExceptionHandler(BusNotFoundException.class)
+    public ResponseEntity<ErrorResponse> handleBusNotFoundException(final BusNotFoundException exc) {
+        ErrorResponse errorResponse = prepareErrorResponse(BUS_NOT_FOUND, exc.getMessage());
+        return new ResponseEntity<>(errorResponse, HttpStatus.NOT_FOUND);
+    }
+
+    @ExceptionHandler(BusAlreadyExistsException.class)
+    public ResponseEntity<ErrorResponse> handleBusAlreadyExistsException(final BusAlreadyExistsException exc) {
+        ErrorResponse errorResponse = prepareErrorResponse(BUS_EXISTS, exc.getMessage());
+        return new ResponseEntity<>(errorResponse, HttpStatus.CONFLICT);
     }
 
 
