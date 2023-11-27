@@ -16,36 +16,36 @@ Dependencies were updated since the creation of each project, but only up to a c
 ## TABLE OF CONTENT
 
 - [**EX1-BEANS**](#ex1-beans)
-  - Project Details
-  - Dependencies
+  * Project Details
+  * Dependencies
 - [**EX2-BEANS**](#ex2-beans)
-  - Project Details
-  - Dependencies
+  * Project Details
+  * Dependencies
 - [**EX3-SCHEDULING**](#ex3-scheduling)
-  - Project Details
-  - Dependencies
+  * Project Details
+  * Dependencies
 - [**EX4-STREAM-API-JUNIT-TESTS**](#ex4-stream-api-junit-tests)
-  - Project Details
-  - Class Hierarchy Tree
-  - Dependencies
+  * Project Details
+  * Class Hierarchy Tree
+  * Dependencies
 - [**EX5-EXPERIMENTAL-GET-MAPPING**](#ex5-experimental-get-mapping)
-  - Project Details
-  - API Reference
-  - RegEx Details
-  - About Further Formatting `name`
-  - API Response Examples
-  - Dependencies
+  * Project Details
+  * API Reference
+  * RegEx Details
+  * About Further Formatting `name`
+  * API Response Examples
+  * Dependencies
 - [**EX6-H2-STUDENTS**](#ex6-h2-students)
-  - Project Details
-  - Screenshots
-  - Dependencies
+  * Project Details
+  * Screenshots
+  * Dependencies
 - [**EX7-RESTAPI-H2-BUSSES**](#ex7-restapi-h2-busses)
-  - Project Details
-  - API Reference
-  - RegEx Details
-  - API Response Examples
-  - Screenshots
-  - Dependencies
+  * Project Details
+  * API Reference
+  * RegEx Details
+  * API Response Examples
+  * Screenshots
+  * Dependencies
 
 
 ## EX1-BEANS
