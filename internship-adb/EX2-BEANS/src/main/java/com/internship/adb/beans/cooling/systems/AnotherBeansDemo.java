@@ -18,12 +18,12 @@ public class AnotherBeansDemo {
         Fridge fridge = coolingSystem instanceof Fridge ? ((Fridge) coolingSystem) : null;
         AirConditioning airConditioning = context.getBean("airConditioning", AirConditioning.class);
 
-        // to assert it does not throw exceptions
+        // Assert it does not throw exceptions
         Assert.notNull(context.getBean("airConditioningAlt", CoolingSystem.class), "Everything's fine...");
 
         context.close();
 
-        // since fridge is a primary bean it is not a null
+        // since fridge is a primary bean, it is not a null
         if (fridge != null) {
             System.out.println("\n" + dashes + fridge.getClass().getSimpleName() + " Bean" + dashes);
             fridge.turnOn();

@@ -2,7 +2,7 @@
 # INTERNSHIP ADB
 
 <p align="justify">
-This repository contains projects that are outcome of my work placement 
+This repository contains projects that are an outcome of my work placement 
 (as a part of my first-cycle studies) in <b>ADB POLSKA SP. Z O.O. (ZIELONA GORA OFFICE)</b> 
 that took place in <b>July 2021</b>. In the process of work placement I have been introduced to foundations of 
 <code>Spring framework</code>. The culmination of work was to implement an example of simple <code>REST API</code>.</p>
@@ -224,7 +224,7 @@ Mapping was only provided for <code>GET</code> method. The concept of the projec
 - Incrementation is stopped being followed once application has been shut down.
 - Values of the key are being **formatted** before the `API` returns a response. Read further for details.
 
-> The general idea is that user can introduce themselves in a request and then API returns welcome message as a response.
+> The general idea is that user can introduce themselves in a request and then API returns a welcome message as a response.
 
 The application **produces** data in `json` format.
 
@@ -418,7 +418,7 @@ spring.datasource.password=
 ## EX7-RESTAPI-H2-BUSSES
 
 <p align="justify">
-This project was focused on simple <code>REST API</code> implementation. The project is built from following components:
+This project was focused on simple <code>REST API</code> implementation. The project is built from the following components:
 </p>
 
 - Spring Configuration class

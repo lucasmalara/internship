@@ -55,7 +55,7 @@ class StreamTest {
         ANIMALS.add(cat2);
         ANIMALS.add(cat6);
 
-        //Added replicated cat and dogs
+        //Added a replicated cat and dogs
         ANIMALS.add(cat3);
         ANIMALS.add(dog2);
         ANIMALS.add(dog2);

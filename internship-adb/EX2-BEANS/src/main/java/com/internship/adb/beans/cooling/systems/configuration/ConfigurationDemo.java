@@ -26,7 +26,7 @@ public class ConfigurationDemo {
     @Bean("airConditioning")
     public CoolingSystem airConditioning() {
         /*
-        * Since it is a Configuration class getRandomBooleanBean() will not be called like a pure JAVA code.
+        * Since it is a Configuration class, getRandomBooleanBean() will not be called like a pure JAVA code.
         * It will be returned as a Bean once retrieved from the Spring context.
         * */
         return new AirConditioning(booleanBean());
